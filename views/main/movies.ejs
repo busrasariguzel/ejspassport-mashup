@@ -10,15 +10,14 @@
     <body>
         
         <header class="header">Now Playing Movies</header>
-
         <div id="movies">
                 <% displayMovie.forEach(element => { %>
                 <div id="movies2">
-                    <img src="http://image.tmdb.org/t/p/w185<%- element[1] %>"><br>
+                    <img src="http://image.tmdb.org/t/p/w185<%- element[1] %>"><br><br>
                     <%= element[0] %>
                     </div>
                 <% }) %>
-            </div>
+        </div>
 
         <footer>
         <%- include ('../partials/footer')%>
