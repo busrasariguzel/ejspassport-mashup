@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <%- include ('../partials/head')%>
+        <title>Project for Colin</title>
+    </head>
+    <body>
+        <header class="header">Random Profiles</header>
+
+        <div id="users">
+        <% peopleList.forEach(element => { %>
+            <div id="users2">
+                <img src="<%- element[0] %>">
+                <%= element[1] %> <%= element[2] %> 
+            </div>
+            <% }) %>
+
+        </div>
+    <div>
+        <%- include ('../partials/footer')%>
+    </div>
+    </body>
+</html>

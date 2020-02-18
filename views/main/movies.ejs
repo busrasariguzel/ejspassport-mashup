@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <%- include ('../partials/head')%>
+        <title>Project for Colin</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        
+        <header class="header">Now Playing Movies</header>
+
+        <div id="movies">
+                <% displayMovie.forEach(element => { %>
+                <div id="movies2">
+                    <img src="http://image.tmdb.org/t/p/w185<%- element[1] %>">
+                    <%= element[0] %>
+                    </div>
+                <% }) %>
+            </div>
+
+        <footer>
+        <%- include ('../partials/footer')%>
+    </footer>
+    </body>
+</html>
