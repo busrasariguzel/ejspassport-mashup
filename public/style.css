@@ -6,7 +6,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
     grid-template-areas:
         'hd1'
         'ph1'
@@ -27,17 +27,19 @@ body {
 }
 #users2 {
     grid-template-columns: repeat(auto-fit, minMax(150px, auto));
-    
+    padding-bottom: 40px;
     border-radius: 20%;
+    height: 100%;
 }
 
 #movies{
     padding-top: 20px;
     display: grid;
     grid-area: ph1;
-    height: 100vh;
-    grid-template-columns: repeat(auto-fit, minMax(220px, auto));
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minMax(300px, auto));
     padding-bottom: 20px;
+    text-align: center;
 
 }
 #movies{
@@ -63,17 +65,45 @@ body {
     text-align: left;
     font-size: 20px;
     color: white;
+    height: 50px;
 
 }
 
 
 @media (max-width: 400px){
+    .header{
+        display: grid;
+        grid-area: hd1;
+        background: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        height: 20%;
+        
+    }
     #users {
-        padding-top: 20px;
+        /* padding-top: 20px; */
         display: grid;
         grid-area: ph1;
-        height: 100vh;
-        grid-template-columns: repeat(auto-fit, minMax(300px, auto));
-        padding-bottom: 20px;
+        height: 100%;
+        grid-template-columns: repeat(auto-fit, minMax(220px, auto));
+        /* padding-bottom: 20px; */
+        text-align: center;
+    }
+    #movies{
+        /* padding-top: 20px; */
+        display: grid;
+        grid-area: ph1;
+        height: 100%;
+        grid-template-columns: repeat(auto-fit, minMax(100px, auto));
+        /* padding-bottom: 20px; */
+        text-align: center;
+    
+    }
+    #users2 {
+        grid-template-columns: repeat(auto-fit, minMax(50px, auto));
+        /* padding-bottom: 40px; */
+        border-radius: 20%;
+        height: 100%;
     }
 }
